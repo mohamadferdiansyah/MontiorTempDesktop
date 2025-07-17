@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:serial_communication_desktop/app/modules/dashboard/dashboard_page.dart';
 import 'package:serial_communication_desktop/app/modules/layout/layout_controller.dart';
+import 'package:serial_communication_desktop/app/modules/room/room_page.dart';
 
 class Sidebar extends StatelessWidget {
   final Function(Widget) onMenuTap;
@@ -28,12 +30,12 @@ class Sidebar extends StatelessWidget {
               'Dashboard',
               style: TextStyle(color: Colors.white),
             ),
-            // onTap: () => onMenuTap(DashboardPage()),
+            onTap: () => onMenuTap(DashboardPage()),
           ),
           ListTile(
             leading: const Icon(Icons.usb, color: Colors.white),
             title: const Text('Ruangan', style: TextStyle(color: Colors.white)),
-            // onTap: () => onMenuTap(SerialPage()),
+            onTap: () => onMenuTap(RoomPage()),
           ),
           ListTile(
             leading: const Icon(Icons.logout, color: Colors.white),
